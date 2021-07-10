@@ -115,8 +115,17 @@ echo '</ca>' >> /etc/openvpn/client-tcp-ssl.ovpn
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( SSL )
 cp /etc/openvpn/client-tcp-ssl.ovpn /home/vps/public_html/client-tcp-ssl.ovpn
 
-#firewall untuk memperbolehkan akses UDP dan akses jalur TCP
+mkdir /root/client
+cp -r /etc/openvpn/client-tcp-ssl.ovpn client
+cp -r /etc/openvpn/client-udp-2200.ovpn client
+cp -r /etc/openvpn/client-tcp-1194.ovpn client
+cd /root
+zip -r openvpn.zip client > /dev/null 2>&1
+cp -r /root/openvpn.zip /home/vps/public_html/all-ovpn.zip
+rm -rf /root/client
+rm -f /root/openvpn.zip
 
+#firewall untuk memperbolehkan akses UDP dan akses jalur TCP
 iptables -t nat -I POSTROUTING -s 10.6.0.0/24 -o $ANU -j MASQUERADE
 iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o $ANU -j MASQUERADE
 iptables-save > /etc/iptables.up.rules

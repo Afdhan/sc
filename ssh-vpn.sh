@@ -162,7 +162,7 @@ accept = 443
 connect = 127.0.0.1:109
 
 [dropbear]
-accept = 222
+accept = 171
 connect = 127.0.0.1:22
 
 [dropbear]
@@ -240,90 +240,7 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
-# download script
 cd /usr/bin
-wget -O hostnya "https://raw.githubusercontent.com/Afdhan/sc/main/host.sh"
-wget -O add-host "https://raw.githubusercontent.com/Afdhan/sc/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Afdhan/sc/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Afdhan/sc/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/Afdhan/sc/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Afdhan/sc/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/Afdhan/sc/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/Afdhan/sc/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Afdhan/sc/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/Afdhan/sc/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/Afdhan/sc/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Afdhan/sc/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Afdhan/sc/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Afdhan/sc/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/Afdhan/sc/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/Afdhan/sc/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Afdhan/sc/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Afdhan/sc/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/Afdhan/sc/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/Afdhan/sc/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Afdhan/sc/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Afdhan/sc/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Afdhan/sc/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Afdhan/sc/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Afdhan/sc/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Afdhan/sc/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Afdhan/sc/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Afdhan/sc/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Afdhan/sc/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Afdhan/sc/main/xp.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/Afdhan/sc/main/kernel-update.sh"
-wget -O tessh "https://raw.githubusercontent.com/Afdhan/sc/main/tessh.sh"
-wget -O ssstp "https://raw.githubusercontent.com/Afdhan/sc/main/ssstp.sh"
-wget -O sssr "https://raw.githubusercontent.com/Afdhan/sc/main/sssr.sh"
-wget -O ltp "https://raw.githubusercontent.com/Afdhan/sc/main/ltp.sh"
-wget -O wgg "https://raw.githubusercontent.com/Afdhan/sc/main/wgg.sh"
-wget -O trj "https://raw.githubusercontent.com/Afdhan/sc/main/trj.sh"
-wget -O wss "https://raw.githubusercontent.com/Afdhan/sc/main/wss.sh"
-wget -O vls "https://raw.githubusercontent.com/Afdhan/sc/main/vls.sh"
-wget -O updatee "https://raw.githubusercontent.com/Afdhan/sc/main/updatee.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/Afdhan/sc/main/auto-reboot.sh"
-chmod +x hostnya
-chmod +x add-host
-chmod +x menu
-chmod +x usernew
-chmod +x trial
-chmod +x hapus
-chmod +x member
-chmod +x delete
-chmod +x cek
-chmod +x restart
-chmod +x speedtest
-chmod +x info
-chmod +x about
-chmod +x autokill
-chmod +x tendang
-chmod +x ceklim
-chmod +x ram
-chmod +x renew
-chmod +x clear-log
-chmod +x change-port
-chmod +x port-ovpn
-chmod +x port-ssl
-chmod +x port-wg
-chmod +x port-sstp
-chmod +x port-tr
-chmod +x port-squid
-chmod +x port-ws
-chmod +x port-vless
-chmod +x wbmn
-chmod +x xp
-chmod +x kernel-updt
-chmod +x tessh
-chmod +x ssstp
-chmod +x sssr
-chmod +x ltp
-chmod +x wgg
-chmod +x trj
-chmod +x wss
-chmod +x vls
-chmod +x updatee
-chmod +x auto-reboot
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files

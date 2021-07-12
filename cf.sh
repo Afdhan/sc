@@ -5,7 +5,7 @@ NC='\e[0m'
 apt install jq curl -y
 DOMAIN=nezavpn.com
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.nezavpn.com
+SUB_DOMAIN=${sub}.nezavpn.my.id
 CF_ID=muhammad.neizam@gmail.com
 CF_KEY=0783093590c2f3eebc8d016382f92c2d10897
 set -euo pipefail

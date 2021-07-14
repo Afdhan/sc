@@ -3,14 +3,14 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 apt install jq curl -y
-DOMAIN=dhans-project.xyz
+DOMAIN=nezavpn.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.dhans-project.xyz
-CF_ID=muhammad.neizam@gmail.com
+SUB_DOMAIN=${sub}.nezavpn.my.id
+CF_ID=Muhammad.neizam@gmail.com
 CF_KEY=0783093590c2f3eebc8d016382f92c2d10897
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
-echo "Updating DNS for ${SUB_DOMAIN}..."
+echo "Record DNS ${SUB_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \

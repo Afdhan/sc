@@ -278,4 +278,7 @@ service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
 touch /var/lib/premium-script/data-user-l2tp
 touch /var/lib/premium-script/data-user-pptp
+echo -e "Done Install IPSec Services" | lolcat
+figlet -f slant AFDHAN - NEZA | lolcat
+sleep 1
 rm -f /root/ipsec.sh

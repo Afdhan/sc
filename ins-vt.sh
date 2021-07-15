@@ -490,7 +490,8 @@ systemctl restart trojan
 systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
-figlet M AFDHAN  NezaVPN | lolcat
+echo -e "Done Install V2ray Sevices" | lolcat
+figlet -f slant AFDHAN - NEZA | lolcat
 rm -f ins-vt.sh
 mv /root/domain /etc/v2ray
 

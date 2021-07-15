@@ -139,4 +139,7 @@ Start_SSR
 }
 Install_SSR
 touch /usr/local/shadowsocksr/akun.conf
+echo -e "Done Install ShadowSocksR" | lolcat
+figlet -f slant AFDHAN - NEZA | lolcat
+sleep 1
 rm -f /root/ssr.sh

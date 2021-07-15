@@ -146,4 +146,3 @@ echo -e "Done Install OpenVPN" | lolcat
 figlet -f slant AFDHAN - NEZA | lolcat
 sleep 1
 rm -f /root/vpn.sh
-

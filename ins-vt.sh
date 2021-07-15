@@ -492,6 +492,6 @@ systemctl restart v2ray
 systemctl enable v2ray
 echo -e "Done Install V2ray Sevices" | lolcat
 figlet -f slant AFDHAN - NEZA | lolcat
+sleep 1
 rm -f ins-vt.sh
 mv /root/domain /etc/v2ray
-

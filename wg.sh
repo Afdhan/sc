@@ -85,7 +85,7 @@ systemctl enable "wg-quick@wg0"
 # Check if WireGuard is running
 systemctl is-active --quiet "wg-quick@wg0"
 WG_RUNNING=$?
-
-figlet M AFDHAN  NezaVPN | lolcat
-
+echo -e "Done Install Wireguard" | lolcat
+figlet -f slant AFDHAN - NEZA | lolcat
+sleep 1
 rm -f /root/wg.sh

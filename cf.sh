@@ -6,8 +6,8 @@ apt install jq curl -y
 DOMAIN=nezavpn.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.nezavpn.my.id
-CF_ID=Muhammad.neizam@gmail.com
-CF_KEY=0783093590c2f3eebc8d016382f92c2d10897
+CF_ID=neza.afdhan@gmail.com
+CF_KEY=c7ce6739f7548dcb626dcbee71140345f2625
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Record DNS ${SUB_DOMAIN}..."

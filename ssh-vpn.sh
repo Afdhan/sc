@@ -280,6 +280,8 @@ cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
-
+echo -e "Done Install SSH Services" | lolcat
+figlet -f slant AFDHAN - NEZA | lolcat
+sleep 1
 # finihsing
 clear

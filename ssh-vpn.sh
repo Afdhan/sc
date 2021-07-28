@@ -280,6 +280,7 @@ cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
+echo "10 */12 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 echo -e "Done Install SSH Services" | lolcat
 figlet -f slant AFDHAN - NEZA | lolcat
 sleep 1

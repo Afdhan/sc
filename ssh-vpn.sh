@@ -157,7 +157,7 @@ socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
-[dropbear]
+[websocket]
 accept = 2053
 connect = 700
 
@@ -165,7 +165,7 @@ connect = 700
 accept = 567
 connect = 127.0.0.1:109
 
-[dropbear]
+[openssh]
 accept = 171
 connect = 127.0.0.1:22
 
@@ -175,7 +175,7 @@ connect = 127.0.0.1:1194
 
 END
 
-# make a certificate
+# certificate
 openssl genrsa -out key.pem 2048
 openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
 -subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"

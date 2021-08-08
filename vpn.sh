@@ -97,7 +97,7 @@ cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-tcp-1194.ovpn
 echo '</ca>' >> /etc/openvpn/client-tcp-1194.ovpn
 
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
-cp /etc/openvpn/client-tcp-1194.ovpn /home/vps/public_html/client-tcp-1194.ovpn
+cp /etc/openvpn/client-tcp-1194.ovpn /home/vps/public_html/TCP.ovpn
 
 # masukkan certificatenya ke dalam config client UDP 2200
 echo '<ca>' >> /etc/openvpn/client-udp-2200.ovpn
@@ -105,7 +105,7 @@ cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-udp-2200.ovpn
 echo '</ca>' >> /etc/openvpn/client-udp-2200.ovpn
 
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 2200 )
-cp /etc/openvpn/client-udp-2200.ovpn /home/vps/public_html/client-udp-2200.ovpn
+cp /etc/openvpn/client-udp-2200.ovpn /home/vps/public_html/UDP.ovpn
 
 # masukkan certificatenya ke dalam config client SSL
 echo '<ca>' >> /etc/openvpn/client-tcp-ssl.ovpn
@@ -113,16 +113,16 @@ cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-tcp-ssl.ovpn
 echo '</ca>' >> /etc/openvpn/client-tcp-ssl.ovpn
 
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( SSL )
-cp /etc/openvpn/client-tcp-ssl.ovpn /home/vps/public_html/client-tcp-ssl.ovpn
+cp /etc/openvpn/client-tcp-ssl.ovpn /home/vps/public_html/SSL.ovpn
 
-mkdir /root/client
-cp -r /etc/openvpn/client-tcp-ssl.ovpn client
-cp -r /etc/openvpn/client-udp-2200.ovpn client
-cp -r /etc/openvpn/client-tcp-1194.ovpn client
+mkdir /root/OpenVPN
+cp -r /etc/openvpn/client-tcp-ssl.ovpn /OpenVPN/SSL.ovpn
+cp -r /etc/openvpn/client-udp-2200.ovpn /OpenVPN/UDP.ovpn
+cp -r /etc/openvpn/client-tcp-1194.ovpn /OpenVPN/TCP.ovpn
 cd /root
-zip -r openvpn.zip client > /dev/null 2>&1
-cp -r /root/openvpn.zip /home/vps/public_html/all-ovpn.zip
-rm -rf /root/client
+zip -r openvpn.zip OpenVPN > /dev/null 2>&1
+cp -r /root/openvpn.zip /home/vps/public_html/ALL.zip
+rm -rf /root/OpenVPN
 rm -f /root/openvpn.zip
 
 #firewall untuk memperbolehkan akses UDP dan akses jalur TCP

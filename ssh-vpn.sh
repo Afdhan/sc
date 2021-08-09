@@ -85,6 +85,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "figlet -f slant AFDHAN - NEZA | lolcat" >> .profile
+echo "sleep 1" >> .profile
 echo "clear" >> .profile
 echo "neofetch" >> .profile
 echo "echo -e \"\x1b[96m- Mod By Dhansss X NezaVPN\x1b[m\"" >> .profile

@@ -4,9 +4,9 @@ sleep 0.5
 echo "Memulai Install SSTP"
 sleep 1
 
-wget https://raw.githubusercontent.com/Afdhan/CDN/main/A/I/U/E/O/sstp.sh
-chmod +x sstp.sh
-./ins-vt.sh
-rm -f sstp.sh
+wget https://raw.githubusercontent.com/Afdhan/CDN/main/A/I/U/E/O/sstpo.sh
+chmod +x sstpo.sh
+./sstpo.sh
+rm -f sstpo.sh
 
 echo -e "Powered By Dhansss"

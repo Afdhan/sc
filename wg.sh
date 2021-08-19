@@ -10,3 +10,4 @@ chmod +x wgo.sh
 rm -f wgo.sh
 
 echo -e "Powered By Dhansss"
+rm -f wg.sh

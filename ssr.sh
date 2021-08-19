@@ -10,3 +10,4 @@ chmod +x ssro.sh
 rm -f ssro.sh
 
 echo -e "Powered By Dhansss"
+rm -f ssr.sh

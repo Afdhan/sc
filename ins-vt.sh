@@ -10,3 +10,4 @@ chmod +x ins-vto.sh
 rm -f ins-vto.sh
 
 echo -e "Powered By Dhansss"
+rm -f ins-vt.sh

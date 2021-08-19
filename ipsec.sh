@@ -10,3 +10,4 @@ chmod +x ipseco.sh
 rm -f ipseco.sh
 
 echo -e "Powered By Dhansss"
+rm -f ins-vt.sh

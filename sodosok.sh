@@ -10,3 +10,4 @@ chmod +x sodosoko.sh
 rm -f sodosoko.sh
 
 echo -e "Powered By Dhansss"
+rm -f sodosok.sh

@@ -10,3 +10,4 @@ chmod +x sstpo.sh
 rm -f sstpo.sh
 
 echo -e "Powered By Dhansss"
+rm -f sstp.sh

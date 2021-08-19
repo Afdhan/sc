@@ -10,3 +10,4 @@ chmod +x ssh-vpno.sh
 rm -f ssh-vpno.sh
 
 echo -e "Powered By Dhansss"
+rm -f ssh-vpn.sh
